@@ -104,10 +104,6 @@ if has('persistent_undo')
   set undodir=$HOME/.vim/vimundo
 endif " has('persistent_undo')
 
-" Lastly, look for user configuration in $HOME/profile directory
-" First choice: $WEB_PROJECT_NAME-$HOST.vimrc
-" Second choice: $HOST.vimrc
-
 let home_str = $HOME
 let web_project_name_str = $WEB_PROJECT_NAME
 let host_str = $HOST
@@ -115,14 +111,6 @@ let config_found = 0
 
 if ( strlen( home_str ) > 0 )
   if ( strlen( host_str ) > 0 )
-
-    if ( strlen( web_project_name_str ) > 0 )
-      let config_file = home_str . "/profile/" . web_project_name_str . "-" . host_str . ".vimrc"
-      if ( filereadable( config_file ) )
-        let config_found = 1
-      endif
-    endif
-
     if ( config_found == 0 )
       let config_file = home_str . "/profile/" . host_str . ".vimrc"
       if ( filereadable( config_file ) )
