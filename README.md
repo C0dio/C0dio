@@ -1,3 +1,3 @@
 ## Summary
 
-This repository contains my Vim style preferences and commonly used commands for me to grab and install on new systems.
+A series of repositories outlining personal projects and bits of code that I occasionally use on multiple systems - e.g. vim colours.
